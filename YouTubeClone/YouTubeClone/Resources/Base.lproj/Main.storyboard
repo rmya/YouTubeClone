@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eyu-62-2E6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trend-->
+        <scene sceneID="UJf-zv-vx0">
+            <objects>
+                <viewController id="6rF-ke-IAl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b7T-rg-WfO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SSg-3W-ssX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Trend" image="star.leadinghalf.filled" catalog="system" id="OPi-Xw-YYZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ZC-Yb-Kp3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="242"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="Rmd-vI-asY">
+            <objects>
+                <viewController id="lCQ-oq-6xC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L9T-ww-MUi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ife-AP-bIY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="E4C-2a-pbq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z8N-R7-CQy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="933"/>
+        </scene>
+        <!--YouTube App-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YouTubeClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="p7P-Ib-8dS">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="312" id="MMN-9k-Uk8" customClass="VideoTableViewCell" customModule="YouTubeClone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="312"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MMN-9k-Uk8" id="XQn-3x-8SR">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="312"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jci-8X-Vz3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="210"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="210" id="XRv-Zx-mzq"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GKk-4a-ScS">
+                                                    <rect key="frame" x="5" y="215" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="KHn-CW-hOj"/>
+                                                        <constraint firstAttribute="height" constant="60" id="WCZ-wP-Xd9"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poets of the Fall - Carnival of Rust (Official Video)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fa-ou-U4w">
+                                                    <rect key="frame" x="75" y="220" width="309" height="33.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poets of the Fall - 54 Mn views - 13 years ago" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nE5-52-Y08">
+                                                    <rect key="frame" x="75" y="258.5" width="329" height="41"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="youtubeGray"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jci-8X-Vz3" firstAttribute="top" secondItem="XQn-3x-8SR" secondAttribute="top" id="3o0-m3-R8P"/>
+                                                <constraint firstItem="jci-8X-Vz3" firstAttribute="leading" secondItem="XQn-3x-8SR" secondAttribute="leading" id="9Uq-lj-9S5"/>
+                                                <constraint firstAttribute="trailing" secondItem="nE5-52-Y08" secondAttribute="trailing" constant="10" id="Dqb-VN-neQ"/>
+                                                <constraint firstItem="0fa-ou-U4w" firstAttribute="top" secondItem="jci-8X-Vz3" secondAttribute="bottom" constant="10" id="FMk-79-JUS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0fa-ou-U4w" secondAttribute="trailing" constant="10" id="Fag-WL-nrx"/>
+                                                <constraint firstAttribute="trailing" secondItem="jci-8X-Vz3" secondAttribute="trailing" id="RjT-1h-7l0"/>
+                                                <constraint firstItem="GKk-4a-ScS" firstAttribute="leading" secondItem="XQn-3x-8SR" secondAttribute="leading" constant="5" id="dON-dA-h5R"/>
+                                                <constraint firstItem="nE5-52-Y08" firstAttribute="leading" secondItem="GKk-4a-ScS" secondAttribute="trailing" constant="10" id="fnm-Xf-g1E"/>
+                                                <constraint firstItem="GKk-4a-ScS" firstAttribute="top" secondItem="jci-8X-Vz3" secondAttribute="bottom" constant="5" id="gwk-iA-WAD"/>
+                                                <constraint firstItem="nE5-52-Y08" firstAttribute="top" secondItem="0fa-ou-U4w" secondAttribute="bottom" constant="5" id="kbW-ua-d5X"/>
+                                                <constraint firstItem="0fa-ou-U4w" firstAttribute="leading" secondItem="GKk-4a-ScS" secondAttribute="trailing" constant="10" id="nHn-uI-8e9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="p7P-Ib-8dS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JZX-qD-D3Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="p7P-Ib-8dS" secondAttribute="bottom" id="Sdn-12-f45"/>
+                            <constraint firstItem="p7P-Ib-8dS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="s4C-GN-AJq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p7P-Ib-8dS" secondAttribute="trailing" id="wgX-T0-lrT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="YouTube App" id="Z5H-PF-dA0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1328.985507246377" y="-438.61607142857139"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="rtT-bl-bk8">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Eyu-62-2E6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pmL-YE-5zQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemRedColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="JeA-Hc-za6" kind="relationship" relationship="viewControllers" id="zt4-HU-LnJ"/>
+                        <segue destination="6rF-ke-IAl" kind="relationship" relationship="viewControllers" id="wBa-f6-wrh"/>
+                        <segue destination="lCQ-oq-6xC" kind="relationship" relationship="viewControllers" id="Z2x-fo-Apm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Bu-ff-425" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-200" y="217"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="TJT-tW-7t7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JeA-Hc-za6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="yej-VB-oCG"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eWz-iI-zWW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" systemColor="systemRedColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8Iz-b3-XZm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nYq-Mt-drM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="579.71014492753625" y="-445.3125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="star.leadinghalf.filled" catalog="system" width="128" height="116"/>
+        <namedColor name="youtubeGray">
+            <color red="0.56999999284744263" green="0.56999999284744263" blue="0.56999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
