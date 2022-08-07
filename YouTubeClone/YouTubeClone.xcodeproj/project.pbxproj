@@ -19,6 +19,9 @@
 		3D516C13289FEDE000D6E7A3 /* YouTubeCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D516C12289FEDE000D6E7A3 /* YouTubeCloneUITestsLaunchTests.swift */; };
 		3D516C2028A009F700D6E7A3 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D516C1F28A009F700D6E7A3 /* VideoTableViewCell.swift */; };
 		3D516C2228A00A1F00D6E7A3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D516C2128A00A1F00D6E7A3 /* DetailViewController.swift */; };
+		3D516C2D28A00D1F00D6E7A3 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D516C2C28A00D1F00D6E7A3 /* DetailTableViewCell.swift */; };
+		3D516C3028A00D5500D6E7A3 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D516C2F28A00D5500D6E7A3 /* Video.swift */; };
+		3D516C3228A011C100D6E7A3 /* Videos.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D516C3128A011C100D6E7A3 /* Videos.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		3D516C12289FEDE000D6E7A3 /* YouTubeCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3D516C1F28A009F700D6E7A3 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		3D516C2128A00A1F00D6E7A3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3D516C2C28A00D1F00D6E7A3 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		3D516C2F28A00D5500D6E7A3 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		3D516C3128A011C100D6E7A3 /* Videos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Videos.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +111,13 @@
 		3D516BEB289FEDDF00D6E7A3 /* YouTubeClone */ = {
 			isa = PBXGroup;
 			children = (
+				3D516C2E28A00D3C00D6E7A3 /* Entity */,
 				3D516C2328A00A4D00D6E7A3 /* App */,
 				3D516C2428A00ACB00D6E7A3 /* Resources */,
 				3D516C2828A00B7C00D6E7A3 /* Home */,
 				3D516C2928A00BAE00D6E7A3 /* VideoDetail */,
+				3D516C2A28A00C7000D6E7A3 /* Trends */,
+				3D516C2B28A00C7D00D6E7A3 /* Profile */,
 				3D516BFD289FEDE000D6E7A3 /* Info.plist */,
 				3D516BF5289FEDDF00D6E7A3 /* YouTubeClone.xcdatamodeld */,
 			);
@@ -144,6 +153,7 @@
 		3D516C2428A00ACB00D6E7A3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3D516C3128A011C100D6E7A3 /* Videos.json */,
 				3D516BF2289FEDDF00D6E7A3 /* Main.storyboard */,
 				3D516BF8289FEDE000D6E7A3 /* Assets.xcassets */,
 				3D516BFA289FEDE000D6E7A3 /* LaunchScreen.storyboard */,
@@ -164,8 +174,31 @@
 			isa = PBXGroup;
 			children = (
 				3D516C2128A00A1F00D6E7A3 /* DetailViewController.swift */,
+				3D516C2C28A00D1F00D6E7A3 /* DetailTableViewCell.swift */,
 			);
 			path = VideoDetail;
+			sourceTree = "<group>";
+		};
+		3D516C2A28A00C7000D6E7A3 /* Trends */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Trends;
+			sourceTree = "<group>";
+		};
+		3D516C2B28A00C7D00D6E7A3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		3D516C2E28A00D3C00D6E7A3 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				3D516C2F28A00D5500D6E7A3 /* Video.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +308,7 @@
 				3D516BFC289FEDE000D6E7A3 /* LaunchScreen.storyboard in Resources */,
 				3D516BF9289FEDE000D6E7A3 /* Assets.xcassets in Resources */,
 				3D516BF4289FEDDF00D6E7A3 /* Main.storyboard in Resources */,
+				3D516C3228A011C100D6E7A3 /* Videos.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,8 +335,10 @@
 			files = (
 				3D516BF1289FEDDF00D6E7A3 /* ViewController.swift in Sources */,
 				3D516BED289FEDDF00D6E7A3 /* AppDelegate.swift in Sources */,
+				3D516C2D28A00D1F00D6E7A3 /* DetailTableViewCell.swift in Sources */,
 				3D516BEF289FEDDF00D6E7A3 /* SceneDelegate.swift in Sources */,
 				3D516C2228A00A1F00D6E7A3 /* DetailViewController.swift in Sources */,
+				3D516C3028A00D5500D6E7A3 /* Video.swift in Sources */,
 				3D516BF7289FEDDF00D6E7A3 /* YouTubeClone.xcdatamodeld in Sources */,
 				3D516C2028A009F700D6E7A3 /* VideoTableViewCell.swift in Sources */,
 			);

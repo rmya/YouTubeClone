@@ -53,7 +53,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="312" id="MMN-9k-Uk8" customClass="VideoTableViewCell" customModule="YouTubeClone" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="homeCell" rowHeight="312" id="MMN-9k-Uk8" customClass="VideoTableViewCell" customModule="YouTubeClone" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="312"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MMN-9k-Uk8" id="XQn-3x-8SR">
@@ -100,8 +100,18 @@
                                                 <constraint firstItem="0fa-ou-U4w" firstAttribute="leading" secondItem="GKk-4a-ScS" secondAttribute="trailing" constant="10" id="nHn-uI-8e9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageChannel" destination="GKk-4a-ScS" id="49Z-uv-Qko"/>
+                                            <outlet property="imageVideo" destination="jci-8X-Vz3" id="hVI-NP-dVk"/>
+                                            <outlet property="shortDescription" destination="nE5-52-Y08" id="57l-6f-gHq"/>
+                                            <outlet property="title" destination="0fa-ou-U4w" id="Zb3-Z2-0EB"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="YFW-VK-hqO"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2N4-1D-ZJd"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

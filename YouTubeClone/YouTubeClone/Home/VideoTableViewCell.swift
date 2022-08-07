@@ -8,7 +8,12 @@
 import UIKit
 
 class VideoTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var imageVideo: UIImageView!
+    @IBOutlet weak var imageChannel: UIImageView!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var shortDescription: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
