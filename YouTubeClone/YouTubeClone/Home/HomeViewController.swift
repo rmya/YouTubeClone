@@ -15,8 +15,10 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.loadJsonData()
         videoTableView.delegate = self
         videoTableView.dataSource = self
+        self.videoTableView.rowHeight = 310
         
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = .red
@@ -35,6 +37,7 @@ class HomeViewController: UIViewController {
         DispatchQueue.main.async {
             do{
                 self.videos = try JSONDecoder().decode([Video].self, from: data)
+                self.videoTableView.reloadData()
             }catch{print(error.localizedDescription)}
         }
     }
@@ -48,7 +51,8 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath) as! VideoTableViewCell
-        
+        let video = videos[indexPath.row]
+        cell.prepare(video: video)
         return cell
     }
 }

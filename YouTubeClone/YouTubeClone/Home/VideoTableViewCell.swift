@@ -24,17 +24,37 @@ class VideoTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func prepare(video: Video) {
+        imageVideo.loadImage(url: video.imageUrl)
+        title.text = video.title
+        shortDescription.text = video.shortDescription
+        imageChannel.loadImage(url: video.channelImageUrl)
+        imageChannel.maskCircle()
+    }
 
 }
 
 
 extension UIImageView {
-    private func maskCircle(anyImage : UIImage) {
+    
+    func maskCircle() {
         self.contentMode = UIView.ContentMode.scaleAspectFill
         self.layer.cornerRadius = self.frame.height / 2
         self.layer.masksToBounds = false
         self.clipsToBounds = true
-
-       self.image = anyImage
     }
+    
+    func loadImage(url: URL){
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url){
+                if let image = UIImage(data: data){
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
+    
 }
