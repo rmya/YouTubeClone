@@ -15,6 +15,7 @@ struct Video : Decodable {
     let date: String
     let video_key: String
     let channel_image_key: String
+    let detail_subscribe: String
     
     var imageUrl: URL {
         return URL(string: "https://img.youtube.com/vi/\(video_key)/0.jpg")!
@@ -34,6 +35,14 @@ struct Video : Decodable {
     
     var detailDescription: String {
         return "\(view) - \(date)"
+    }
+    
+    var channelName: String {
+        return "\(channel)"
+    }
+    
+    var subscribe: String {
+        return "\(detail_subscribe)"
     }
 }
 

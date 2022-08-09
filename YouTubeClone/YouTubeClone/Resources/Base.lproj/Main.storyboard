@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -105,7 +106,7 @@
                                             <outlet property="imageVideo" destination="jci-8X-Vz3" id="hVI-NP-dVk"/>
                                             <outlet property="shortDescription" destination="nE5-52-Y08" id="57l-6f-gHq"/>
                                             <outlet property="title" destination="0fa-ou-U4w" id="Zb3-Z2-0EB"/>
-                                            <segue destination="gQG-X2-ko0" kind="show" id="Gm1-tU-106"/>
+                                            <segue destination="gQG-X2-ko0" kind="show" identifier="toDetail" id="Gm1-tU-106"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -133,7 +134,7 @@
             </objects>
             <point key="canvasLocation" x="1312" y="-445"/>
         </scene>
-        <!--Youtube App-->
+        <!--Detail View Controller-->
         <scene sceneID="xtF-yS-OkL">
             <objects>
                 <viewController id="gQG-X2-ko0" customClass="DetailViewController" customModule="YouTubeClone" customModuleProvider="target" sceneMemberID="viewController">
@@ -168,26 +169,29 @@
                                 <rect key="frame" x="0.0" y="355.5" width="414" height="60"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YQ7-wK-sFK">
-                                        <rect key="frame" x="8" y="0.0" width="60" height="60"/>
+                                        <rect key="frame" x="8" y="5" width="50" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="Q7V-X3-IeE"/>
-                                            <constraint firstAttribute="height" constant="60" id="Wde-c0-zye"/>
+                                            <constraint firstAttribute="width" constant="50" id="Q7V-X3-IeE"/>
+                                            <constraint firstAttribute="height" constant="50" id="Wde-c0-zye"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poets of the Fall" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCu-AR-9gP">
-                                        <rect key="frame" x="78" y="5" width="139.5" height="24"/>
+                                        <rect key="frame" x="68" y="5" width="139.5" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" name="labelColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrk-C4-D6G">
-                                        <rect key="frame" x="299.5" y="14.5" width="109.5" height="31"/>
+                                        <rect key="frame" x="328" y="14.5" width="81" height="31"/>
                                         <color key="tintColor" name="youTubeRed"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="bell.fill" catalog="system" imagePlacement="trailing" title="Subscribe"/>
+                                        <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="Subscribe">
+                                            <imageReference key="image" image="bell.fill" catalog="system" symbolScale="small"/>
+                                            <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22.2K Subscribe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucZ-Df-TLY">
-                                        <rect key="frame" x="78" y="34" width="113" height="18"/>
+                                        <rect key="frame" x="68" y="34" width="113" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" name="youtubeGray"/>
                                         <nil key="highlightedColor"/>
@@ -201,19 +205,19 @@
                                     <constraint firstAttribute="height" constant="60" id="Erd-ds-L6H"/>
                                     <constraint firstItem="ucZ-Df-TLY" firstAttribute="leading" secondItem="YQ7-wK-sFK" secondAttribute="trailing" constant="10" id="Fmo-dD-o5Z"/>
                                     <constraint firstItem="YQ7-wK-sFK" firstAttribute="leading" secondItem="U3C-Kg-FTJ" secondAttribute="leading" constant="8" id="LZa-G3-LsC"/>
-                                    <constraint firstItem="YQ7-wK-sFK" firstAttribute="top" secondItem="U3C-Kg-FTJ" secondAttribute="top" id="fXT-3K-aHW"/>
+                                    <constraint firstItem="YQ7-wK-sFK" firstAttribute="top" secondItem="U3C-Kg-FTJ" secondAttribute="top" constant="5" id="fXT-3K-aHW"/>
                                     <constraint firstItem="Mrk-C4-D6G" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sCu-AR-9gP" secondAttribute="trailing" constant="8" symbolic="YES" id="hMG-PJ-9f2"/>
                                     <constraint firstItem="sCu-AR-9gP" firstAttribute="top" secondItem="U3C-Kg-FTJ" secondAttribute="top" constant="5" id="ltD-AW-O58"/>
                                     <constraint firstItem="ucZ-Df-TLY" firstAttribute="top" secondItem="sCu-AR-9gP" secondAttribute="bottom" constant="5" id="v3Z-1q-vwI"/>
                                     <constraint firstItem="Mrk-C4-D6G" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ucZ-Df-TLY" secondAttribute="trailing" constant="8" symbolic="YES" id="wyh-Rd-j9k"/>
-                                    <constraint firstAttribute="bottom" secondItem="YQ7-wK-sFK" secondAttribute="bottom" id="xwU-dZ-hK5"/>
+                                    <constraint firstAttribute="bottom" secondItem="YQ7-wK-sFK" secondAttribute="bottom" constant="5" id="xwU-dZ-hK5"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="crL-oS-z2X">
                                 <rect key="frame" x="0.0" y="420.5" width="414" height="392.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detailCell" rowHeight="120" id="pWq-3e-dw2" customClass="DetailTableViewCell" customModule="YouTubeClone" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="suggestCell" rowHeight="120" id="pWq-3e-dw2" customClass="DetailTableViewCell" customModule="YouTubeClone" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pWq-3e-dw2" id="lvq-mL-aEA">
@@ -226,7 +230,7 @@
                                                         <constraint firstAttribute="width" constant="120" id="GK7-FR-BNj"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poets of the Fall - Carnival of Rust" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzQ-QP-ag2">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poets of the Fall - Carnival of Rust" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzQ-QP-ag2">
                                                     <rect key="frame" x="150" y="16" width="234" height="38.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" name="labelColor"/>
@@ -260,8 +264,18 @@
                                                 <constraint firstItem="pDQ-Wj-Ybi" firstAttribute="leading" secondItem="yZr-Jx-nbm" secondAttribute="trailing" constant="10" id="wmx-u4-pet"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="suggestChannelName" destination="pDQ-Wj-Ybi" id="Xz6-zG-9Rj"/>
+                                            <outlet property="suggestDescription" destination="Xse-dd-677" id="Qcr-Fe-hW7"/>
+                                            <outlet property="suggestTiitle" destination="yzQ-QP-ag2" id="gAg-94-85p"/>
+                                            <outlet property="suggestVideoImage" destination="yZr-Jx-nbm" id="a3r-Iz-Hem"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gQG-X2-ko0" id="Mu0-7F-pa3"/>
+                                    <outlet property="delegate" destination="gQG-X2-ko0" id="AHu-4J-Roa"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wj1-kb-TaY"/>
@@ -286,7 +300,16 @@
                             <constraint firstItem="crL-oS-z2X" firstAttribute="top" secondItem="U3C-Kg-FTJ" secondAttribute="bottom" constant="5" id="xV6-qh-tOl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Youtube App" id="rcS-0w-07G"/>
+                    <navigationItem key="navigationItem" id="rcS-0w-07G"/>
+                    <connections>
+                        <outlet property="detailChannelImage" destination="YQ7-wK-sFK" id="Jy2-0E-88z"/>
+                        <outlet property="detailChannelName" destination="sCu-AR-9gP" id="7YB-kN-Gb7"/>
+                        <outlet property="detailDescription" destination="xan-Ih-nQT" id="Xa5-0w-cBS"/>
+                        <outlet property="detailSubscribe" destination="ucZ-Df-TLY" id="jav-LS-2c4"/>
+                        <outlet property="detailTitle" destination="jxP-lK-Ebb" id="Wby-C1-ciR"/>
+                        <outlet property="suggestTableView" destination="crL-oS-z2X" id="Kfi-Xe-VW5"/>
+                        <outlet property="webView" destination="nvg-cG-FGB" id="Zi6-Ge-d4y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rw4-zh-fAa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

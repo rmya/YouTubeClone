@@ -8,7 +8,12 @@
 import UIKit
 
 class DetailTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var suggestVideoImage: UIImageView!
+    @IBOutlet weak var suggestTiitle: UILabel!
+    @IBOutlet weak var suggestChannelName: UILabel!
+    @IBOutlet weak var suggestDescription: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,4 +25,10 @@ class DetailTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func prepare(video: Video){
+        suggestTiitle.text = video.title
+        suggestChannelName.text = video.channelName
+        suggestDescription.text = video.detailDescription
+        suggestVideoImage.loadImage(url: video.imageUrl)
+    }
 }

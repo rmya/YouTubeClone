@@ -22,6 +22,8 @@ class HomeViewController: UIViewController {
         
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = .red
+        navigationController?.navigationBar.backgroundColor = .red
+        navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
@@ -55,6 +57,17 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource {
         cell.prepare(video: video)
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         let video = videos[indexPath.row]
+         performSegue(withIdentifier: "toDetail", sender: video)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            let video = sender as? Video
+            let vc = segue.destination as! DetailViewController
+            vc.video = video
+        }
+    }
 }
-
-
