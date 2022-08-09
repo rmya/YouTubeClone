@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
+   
     }
     
     func loadJsonData(){
@@ -62,7 +63,7 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource {
          let video = videos[indexPath.row]
          performSegue(withIdentifier: "toDetail", sender: video)
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
             let video = sender as? Video
@@ -70,4 +71,18 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource {
             vc.video = video
         }
     }
+
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        let vc = segue.destination as! DetailViewController
+//        guard let row = self.tableView?.indexPathForSelectedRow?.row ?? 0 else {
+//            return
+//        }
+//        let video = self.videos[row]
+//
+//        vc.video = video
+//
+//    }
+    
 }
